@@ -11,6 +11,8 @@ Nothing here is built by this project.  Each module is copied byte for byte from
 | `5.4.268-329.ptl4tv.5` | [`r8152_oot.ko`](drivers/5.4.268-329.ptl4tv.5) | 2022 C2, 2024 C4 (webOS 25) | Realtek RTL8152, RTL8153, RTL8156 | [DonZoomik](https://github.com/DonZoomik/webos-r8152) |
 | `5.4.268-294.17.paparoa.pine.2` | [`r8152.ko`](drivers/5.4.268-294.17.paparoa.pine.2) | 2024 QNED and OLED, K25lp / Paparoa (webOS 25) | Realtek RTL8152, RTL8153 | [mbenitez343](https://github.com/mbenitez343/lg-webos-2024-ethernet-fix) |
 | `4.4.84-612.jcl4tv.40` | [`ax88179_178a.ko`](drivers/4.4.84-612.jcl4tv.40) | 2020 UN7300 (webOS 5) | ASIX AX88179, AX88178A | [OCT0PUSCRIME](https://github.com/OCT0PUSCRIME/lg-webos-ax88179-driver) |
+| `5.4.268-294.24.papikonda.2` | [`ax88179_178a.ko`](drivers/5.4.268-294.24.papikonda.2) | 2025 B5 (webOS 25) | ASIX AX88179, AX88178A | [dd3git](https://github.com/dd3git/lg-webos-ax88179-driver) |
+| `4.4.84`, K5Lp chip | [`r8152.ko`, `ax88179_178a.ko`](drivers/k5lp-4.4.84) | TVs with the Realtek K5Lp chip | Realtek RTL8152, RTL8153; ASIX AX88179, AX88178A | [throwaway96](https://github.com/throwaway96/webos-kernel-drivers) |
 
 `SHA256SUMS` lists every module's checksum.
 
