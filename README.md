@@ -28,6 +28,20 @@ These are built from LG's own kernel source with [LG-USB-2-ETH0's driver build](
 | `5.4.268-294.24.papikonda.2`, K24 chip only | [`r8152_oot.ko`](experimental/5.4.268-294.24.papikonda.2-k24) | 2024 and 2025 TVs with the K24 chip, like the B4 | Realtek RTL8152, RTL8153, RTL8156 |
 | `4.4.84-612.40.jimna.1`, K6Lp chip only | [`r8152.ko`, `ax88179_178a.ko`](experimental/4.4.84-612.40.jimna.1-k6lp) | 2020 TVs with the K6Lp chip (like the UN7300) on firmware 04.64 | Realtek RTL8152, RTL8153; ASIX AX88179, AX88178A |
 | `4.4.84-612.21.6.jardine.2`, K6Lp chip only | [`r8152.ko`, `ax88179_178a.ko`](experimental/4.4.84-612.21.6.jardine.2-k6lp) | 2020 TVs with the K6Lp chip on firmware 03.21 | Realtek RTL8152, RTL8153; ASIX AX88179, AX88178A |
+| `5.4.268-294.24.papikonda.2`, k24n chip only | [`r8152_oot.ko`](experimental/5.4.268-294.24.papikonda.2-k24n) | TVs with Realtek's K24N chip (like the 2025 B5), webOS 25 firmware 33.31 | Realtek RTL8152, RTL8153 and RTL8156 |
+| `5.4.268-294.24.papikonda.2`, k25lp chip only | [`r8152_oot.ko`](experimental/5.4.268-294.24.papikonda.2-k25lp) | TVs with Realtek's K25Lp chip, webOS 25 firmware 33.31 | Realtek RTL8152, RTL8153 and RTL8156 |
+| `5.4.268-294.24.papikonda.2`, k8hp chip only | [`r8152_oot.ko`](experimental/5.4.268-294.24.papikonda.2-k8hp) | TVs with Realtek's K8Hp chip, webOS 25 firmware 33.31 | Realtek RTL8152, RTL8153 and RTL8156 |
+| `5.4.268-294.24.papikonda.2`, k8hpp chip only | [`r8152_oot.ko`](experimental/5.4.268-294.24.papikonda.2-k8hpp) | TVs with Realtek's K8Hpp chip, webOS 25 firmware 33.31 | Realtek RTL8152, RTL8153 and RTL8156 |
+| `5.4.268-294.24.papikonda.2`, k8lpn chip only | [`r8152_oot.ko`](experimental/5.4.268-294.24.papikonda.2-k8lpn) | TVs with Realtek's K8LpN chip, webOS 25 firmware 33.31 | Realtek RTL8152, RTL8153 and RTL8156 |
+| `5.4.268-294.24.papikonda.2`, k8lpn2 chip only | [`r8152_oot.ko`](experimental/5.4.268-294.24.papikonda.2-k8lpn2) | TVs with Realtek's K8LpN2 chip, webOS 25 firmware 33.31 | Realtek RTL8152, RTL8153 and RTL8156 |
+| `5.4.268-294.ptl4tv.24`, k24n chip only | [`r8152_oot.ko`](experimental/5.4.268-294.ptl4tv.24-k24n) | TVs with Realtek's K24N chip (like the 2025 B5), webOS 25 firmware 33.30 | Realtek RTL8152, RTL8153 and RTL8156 |
+| `5.4.268-294.ptl4tv.24`, k25lp chip only | [`r8152_oot.ko`, `ax88179_178a.ko`](experimental/5.4.268-294.ptl4tv.24-k25lp) | TVs with Realtek's K25Lp chip, webOS 25 firmware 33.30 | Realtek RTL8152, RTL8153 and RTL8156; ASIX AX88179 and AX88178A |
+| `5.4.96-115.30.mole.2`, k8hp chip only | [`r8152_oot.ko`, `ax88179_178a.ko`](experimental/5.4.96-115.30.mole.2-k8hp) | TVs with Realtek's K8Hp chip, firmware 04.60 (webOS 22) | Realtek RTL8152, RTL8153 and RTL8156; ASIX AX88179 and AX88178A |
+| `5.4.96-115.30.mole.2`, k8lp chip only | [`r8152_oot.ko`, `ax88179_178a.ko`](experimental/5.4.96-115.30.mole.2-k8lp) | TVs with Realtek's K8Lp chip, firmware 04.60 (webOS 22) | Realtek RTL8152, RTL8153 and RTL8156; ASIX AX88179 and AX88178A |
+| `5.4.96-115.30.mole.2`, k8ap chip only | [`r8152_oot.ko`, `ax88179_178a.ko`](experimental/5.4.96-115.30.mole.2-k8ap) | TVs with Realtek's K8Ap chip, firmware 04.60 (webOS 22) | Realtek RTL8152, RTL8153 and RTL8156; ASIX AX88179 and AX88178A |
+| `5.4.96-115.28.mirima.1`, k8hp chip only | [`r8152_oot.ko`, `ax88179_178a.ko`](experimental/5.4.96-115.28.mirima.1-k8hp) | TVs with Realtek's K8Hp chip, firmware 04.53 and 04.54 (webOS 22) | Realtek RTL8152, RTL8153 and RTL8156; ASIX AX88179 and AX88178A |
+| `5.4.96-115.28.mirima.1`, k8lp chip only | [`r8152_oot.ko`, `ax88179_178a.ko`](experimental/5.4.96-115.28.mirima.1-k8lp) | TVs with Realtek's K8Lp chip, firmware 04.53 and 04.54 (webOS 22) | Realtek RTL8152, RTL8153 and RTL8156; ASIX AX88179 and AX88178A |
+| `5.4.96-115.28.mirima.1`, k8ap chip only | [`r8152_oot.ko`, `ax88179_178a.ko`](experimental/5.4.96-115.28.mirima.1-k8ap) | TVs with Realtek's K8Ap chip, firmware 04.53 and 04.54 (webOS 22) | Realtek RTL8152, RTL8153 and RTL8156; ASIX AX88179 and AX88178A |
 
 `experimental/SHA256SUMS` lists their checksums.
 
