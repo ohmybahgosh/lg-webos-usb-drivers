@@ -2,7 +2,7 @@
 
 A mirror of the USB Ethernet driver modules that [LG-USB-2-ETH0](https://github.com/ohmybahgosh/LG-USB-2-ETH0)'s `get-driver` offers for rooted LG webOS TVs, so they stay available if an original repository goes away.
 
-Nothing here is built by this project.  Each module is copied byte for byte from its author's repository at a fixed commit, and each folder's `SOURCE.md` says who built it, where it came from and what it's for.  Credit and thanks go to those authors.
+Everything in `drivers/` is copied byte for byte from its author's repository at a fixed commit, and each folder's `SOURCE.md` says who built it, where it came from and what it's for.  Credit and thanks go to those authors.  `experimental/` holds drivers this project built itself, waiting for testers (see [below](#experimental-waiting-for-testers)).
 
 `get-driver` downloads from the author's repository first and only falls back to this mirror if that fails.  Either way, it keeps the file only if its SHA-256 matches the one pinned in the script, so this mirror can't hand out a different file.
 
@@ -15,6 +15,19 @@ Nothing here is built by this project.  Each module is copied byte for byte from
 | `4.4.84`, K5Lp chip | [`r8152.ko`, `ax88179_178a.ko`](drivers/k5lp-4.4.84) | TVs with the Realtek K5Lp chip | Realtek RTL8152, RTL8153; ASIX AX88179, AX88178A | [throwaway96](https://github.com/throwaway96/webos-kernel-drivers) |
 
 `SHA256SUMS` lists every module's checksum.
+
+## Experimental: waiting for testers
+
+These are built from LG's own kernel source with [LG-USB-2-ETH0's driver build](https://github.com/ohmybahgosh/LG-USB-2-ETH0/blob/main/docs/driver-build.md), the way DonZoomik built his.  Each one passed the build's checks (exact `vermagic`, every imported symbol exported by the TV's kernel), but **none has run on a TV yet**, so `get-driver` doesn't offer them.  If your TV runs one of these kernels, please [try it](https://github.com/ohmybahgosh/LG-USB-2-ETH0/blob/main/docs/driver-build.md#testing-one) and report back.
+
+| Kernel (`uname -r`) | Module | TVs | Adapters |
+|---|---|---|---|
+| `5.4.268-329.ptl4tv.2` | [`r8152_oot.ko`](experimental/5.4.268-329.ptl4tv.2) | 2022 to 2025 OLEDs on firmware 33.20 to 33.23 | Realtek RTL8152, RTL8153, RTL8156 |
+| `5.4.268-320` | [`r8152_oot.ko`](experimental/5.4.268-320) | OLEDs on webOS 23 firmware 23.20 to 23.25 | Realtek RTL8152, RTL8153, RTL8156 |
+| `5.4.96-307` | [`r8152_oot.ko`](experimental/5.4.96-307) | 2022 and 2023 OLEDs on firmware 03.31, 03.33 and 13.30 | Realtek RTL8152, RTL8153, RTL8156 |
+| `5.4.268-294.24.papikonda.2`, K24 chip only | [`r8152_oot.ko`](experimental/5.4.268-294.24.papikonda.2-k24) | 2024 and 2025 TVs with the K24 chip, like the B4 | Realtek RTL8152, RTL8153, RTL8156 |
+
+`experimental/SHA256SUMS` lists their checksums.
 
 ## Using one
 
