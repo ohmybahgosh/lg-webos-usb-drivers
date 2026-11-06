@@ -1,0 +1,23 @@
+
+String dump of section '.modinfo':
+  [     0]  license=GPL
+  [     c]  description=Davicom DM96xx USB 10/100 ethernet devices
+  [    43]  author=Peter Korsgaard <jacmet@sunsite.dk>
+  [    6e]  srcversion=9188BA9738A6BCF0D399BC5
+  [    91]  alias=usb:v0A46p1269d*dc*dsc*dp*ic*isc*ip*in*
+  [    bf]  alias=usb:v0A46p0269d*dc*dsc*dp*ic*isc*ip*in*
+  [    ed]  alias=usb:v0A46p9622d*dc*dsc*dp*ic*isc*ip*in*
+  [   11b]  alias=usb:v0A46p9621d*dc*dsc*dp*ic*isc*ip*in*
+  [   149]  alias=usb:v0A46p9620d*dc*dsc*dp*ic*isc*ip*in*
+  [   177]  alias=usb:v0A46p9000d*dc*dsc*dp*ic*isc*ip*in*
+  [   1a5]  alias=usb:v0FE6p9700d*dc*dsc*dp*ic*isc*ip*in*
+  [   1d3]  alias=usb:v0FE6p8101d*dc*dsc*dp*ic*isc*ip*in*
+  [   201]  alias=usb:v0A47p9601d*dc*dsc*dp*ic*isc*ip*in*
+  [   22f]  alias=usb:v0A46p8515d*dc*dsc*dp*ic*isc*ip*in*
+  [   25d]  alias=usb:v0A46p0268d*dc*dsc*dp*ic*isc*ip*in*
+  [   28b]  alias=usb:v0A46p6688d*dc*dsc*dp*ic*isc*ip*in*
+  [   2b9]  alias=usb:v0A46p9601d*dc*dsc*dp*ic*isc*ip*in*
+  [   2e7]  alias=usb:v07AAp9601d*dc*dsc*dp*ic*isc*ip*in*
+  [   315]  depends=
+  [   31e]  vermagic=4.4.84-612.40.jimna.1 SMP preempt mod_unload ARMv7 
+

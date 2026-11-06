@@ -30,4 +30,18 @@
 - **SHA-256:** `2bdda8cd0e9ba5dc4a8a8f82266d6695a71a9cb994e82f77a334e6e496253c84`
 - **Checks:** `vermagic=4.4.84-612.40.jimna.1 SMP preempt mod_unload ARMv7`, the same flags as LG's own modules for this kernel.  The kernel has MODVERSIONS and module signing off, and all 48 symbols it imports are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
 
+## dm9601.ko
+
+- **Driver:** `drivers/net/usb/dm9601.c` from the same LG kernel source, built as a module, since this kernel leaves it out
+- **Adapters:** Davicom DM9601 and the 100 Mbit adapters built on it
+- **SHA-256:** `e9e415185140fba3128d0a9f696ffe26f8899c060f9befcd606828a5b57732c2`
+- **Checks:** `vermagic=4.4.84-612.40.jimna.1 SMP preempt mod_unload ARMv7`, and all 45 symbols it imports are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
+
+## lan78xx.ko
+
+- **Driver:** `drivers/net/usb/lan78xx.c` from the same LG kernel source, built as a module, since this kernel leaves it out
+- **Adapters:** Microchip LAN7800 and LAN7850
+- **SHA-256:** `5d730e46e795e2c15b8ef7ab5728eb6a98d129ad9f423c0596c1524af1376907`
+- **Checks:** `vermagic=4.4.84-612.40.jimna.1 SMP preempt mod_unload ARMv7`, and all 119 symbols it imports are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
+
 `build-*` files are from the build: each module's info, the symbols it imports, and how the build config differs from the TV's (nothing).

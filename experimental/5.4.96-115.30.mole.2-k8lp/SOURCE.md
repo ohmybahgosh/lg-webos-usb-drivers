@@ -22,4 +22,25 @@
 - **SHA-256:** `b754497e8c95b7cb377c1b9b6da8fffc70825b68830c3759077ada0a6b7fc385`
 - **Checks:** `vermagic=5.4.96-115.30.mole.2 SMP preempt mod_unload aarch64`, the kernel has MODVERSIONS and module signing off, and all 47 symbols it imports are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
 
+## aqc111.ko
+
+- **Driver:** `drivers/net/usb/aqc111.c` from the same LG kernel source, built as a module, since this kernel leaves it out
+- **Adapters:** Aquantia AQC111U and AQC112 (5G and 2.5G), and the ASIX, TRENDnet and QNAP adapters built on them
+- **SHA-256:** `3941ed20b06f285deae600f08fff9d954d816c15d105cd93084ad36847d2edd9`
+- **Checks:** `vermagic=5.4.96-115.30.mole.2 SMP preempt mod_unload aarch64`, and all 50 symbols it imports are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
+
+## dm9601.ko
+
+- **Driver:** `drivers/net/usb/dm9601.c` from the same LG kernel source, built as a module, since this kernel leaves it out
+- **Adapters:** Davicom DM9601 and the 100 Mbit adapters built on it
+- **SHA-256:** `cccd72d2d78ab1ea358b270ecfbf067b5e73a55751f8bd422b420d2a6d8c1434`
+- **Checks:** `vermagic=5.4.96-115.30.mole.2 SMP preempt mod_unload aarch64`, and all 44 symbols it imports are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
+
+## lan78xx.ko
+
+- **Driver:** `drivers/net/usb/lan78xx.c` from the same LG kernel source, built as a module, since this kernel leaves it out
+- **Adapters:** Microchip LAN7800 and LAN7850
+- **SHA-256:** `b5ea8692e76285410326cd79d610f1066b65882f57613171bbf599b96d8ffbf0`
+- **Checks:** `vermagic=5.4.96-115.30.mole.2 SMP preempt mod_unload aarch64`, and all 136 symbols it imports are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
+
 `build-*` files are from the build: each module's info, the symbols it imports, and how the build config differs from the TV's.

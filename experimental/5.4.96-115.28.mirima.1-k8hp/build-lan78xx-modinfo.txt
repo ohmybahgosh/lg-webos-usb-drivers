@@ -1,0 +1,15 @@
+
+String dump of section '.modinfo':
+  [     0]  license=GPL
+  [     c]  description=LAN78XX USB 3.0 Gigabit Ethernet Devices
+  [    41]  author=WOOJUNG HUH <woojung.huh@microchip.com>
+  [    70]  parm=msg_level:Override default message level
+  [    9e]  parmtype=msg_level:int
+  [    b5]  srcversion=014C24CDE3DFC5BBCA773B8
+  [    d8]  alias=usb:v0424p7801d*dc*dsc*dp*ic*isc*ip*in*
+  [   106]  alias=usb:v0424p7850d*dc*dsc*dp*ic*isc*ip*in*
+  [   134]  alias=usb:v0424p7800d*dc*dsc*dp*ic*isc*ip*in*
+  [   162]  depends=
+  [   16b]  name=lan78xx
+  [   178]  vermagic=5.4.96-115.28.mirima.1 SMP preempt mod_unload aarch64
+
