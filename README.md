@@ -22,6 +22,8 @@ These are built from LG's own kernel source with [LG-USB-2-ETH0's driver build](
 
 | Kernel (`uname -r`) | Module | TVs | Adapters |
 |---|---|---|---|
+| `5.4.96-934.mlt4tv.17` | [`r8152_oot.ko`, `r8152.ko`](experimental/5.4.96-934.mlt4tv.17) | 2022 LCDs with the LM21AN chip (UQ70 to UQ90), firmware 04.60 (webOS 22).  Their kernel has no USB network drivers at all | Realtek RTL8152, RTL8153, RTL8156 |
+| `5.4.96-934.16.1.mirima.1` | [`r8152_oot.ko`, `r8152.ko`](experimental/5.4.96-934.16.1.mirima.1) | 2022 LCDs with the LM21AN chip, firmware 04.54 (webOS 22) | Realtek RTL8152, RTL8153, RTL8156 |
 | `5.4.268-329.ptl4tv.5` | [`aqc111.ko`, `dm9601.ko`, `lan78xx.ko`](experimental/5.4.268-329.ptl4tv.5) | 2022 to 2025 OLEDs on webOS 25 firmware 33.30 and 33.31, like the C2, C3, C4 and G4 (DonZoomik's Realtek driver above covers Realtek adapters) | Aquantia AQC111U and AQC112; Davicom DM9601; Microchip LAN7800 and LAN7850 |
 | `5.4.268-329.ptl4tv.2` | [`r8152_oot.ko`, `aqc111.ko`, `dm9601.ko`, `lan78xx.ko`](experimental/5.4.268-329.ptl4tv.2) | 2022 to 2025 OLEDs on firmware 33.20 to 33.23 | Realtek RTL8152, RTL8153, RTL8156; Aquantia AQC111U and AQC112; Davicom DM9601; Microchip LAN7800 and LAN7850 |
 | `5.4.268-320` | [`r8152_oot.ko`, `aqc111.ko`, `dm9601.ko`, `lan78xx.ko`](experimental/5.4.268-320) | OLEDs on webOS 24 firmware 23.20 to 23.25 | Realtek RTL8152, RTL8153, RTL8156; Aquantia AQC111U and AQC112; Davicom DM9601; Microchip LAN7800 and LAN7850 |
