@@ -1,6 +1,6 @@
-# r8152_oot.ko for kernel 5.4.268-329.ptl4tv.2 (experimental)
+# Drivers for kernel 5.4.268-329.ptl4tv.2 (experimental)
 
-**Not tested on a TV yet.**  `get-driver` doesn't offer it.  If your TV runs this kernel, please try it and report back: see [Testing one](https://github.com/ohmybahgosh/LG-USB-2-ETH0/blob/main/docs/driver-build.md#testing-one).
+**Not tested on a TV yet.**  `get-driver` doesn't offer them.  If your TV runs this kernel, please try one and report back: see [Testing one](https://github.com/ohmybahgosh/LG-USB-2-ETH0/blob/main/docs/driver-build.md#testing-one).
 
 - **Built by:** [OhMyBahGosh](https://github.com/ohmybahgosh), with [LG-USB-2-ETH0's scripts/driver-build/build.sh](https://github.com/ohmybahgosh/LG-USB-2-ETH0/tree/main/scripts/driver-build), the way [DonZoomik](https://github.com/DonZoomik/webos-r8152) built his
 - **SHA-256:** `450d1655b507c61a50cc94640926c727bd528bfb4bbd0e2b277f7e50c0ad81a9`
