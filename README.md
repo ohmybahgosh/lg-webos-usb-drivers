@@ -26,8 +26,8 @@ These are built from LG's own kernel source with [LG-USB-2-ETH0's driver build](
 | `5.4.268-320` | [`r8152_oot.ko`](experimental/5.4.268-320) | OLEDs on webOS 24 firmware 23.20 to 23.25 | Realtek RTL8152, RTL8153, RTL8156 |
 | `5.4.96-307` | [`r8152_oot.ko`](experimental/5.4.96-307) | 2022 and 2023 OLEDs on firmware 03.31, 03.33 and 13.30 | Realtek RTL8152, RTL8153, RTL8156 |
 | `5.4.268-294.24.papikonda.2`, K24 chip only | [`r8152_oot.ko`](experimental/5.4.268-294.24.papikonda.2-k24) | 2024 and 2025 TVs with the K24 chip, like the B4 | Realtek RTL8152, RTL8153, RTL8156 |
-| `4.4.84-612.40.jimna.1`, K6Lp chip only | [`r8152.ko`, `ax88179_178a.ko`](experimental/4.4.84-612.40.jimna.1-k6lp) | 2020 TVs with the K6Lp chip (like the UN7300) on firmware 04.64 | Realtek RTL8152, RTL8153; ASIX AX88179, AX88178A |
-| `4.4.84-612.21.6.jardine.2`, K6Lp chip only | [`r8152.ko`, `ax88179_178a.ko`](experimental/4.4.84-612.21.6.jardine.2-k6lp) | 2020 TVs with the K6Lp chip on firmware 03.21 | Realtek RTL8152, RTL8153; ASIX AX88179, AX88178A |
+| `4.4.84-612.40.jimna.1`, K6Lp chip only | [`r8152.ko`, `r8152_oot.ko`, `ax88179_178a.ko`](experimental/4.4.84-612.40.jimna.1-k6lp) | 2020 TVs with the K6Lp chip (like the UN7300) on firmware 04.64 | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179, AX88178A |
+| `4.4.84-612.21.6.jardine.2`, K6Lp chip only | [`r8152.ko`, `r8152_oot.ko`, `ax88179_178a.ko`](experimental/4.4.84-612.21.6.jardine.2-k6lp) | 2020 TVs with the K6Lp chip on firmware 03.21 | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179, AX88178A |
 | `5.4.268-294.24.papikonda.2`, k24n chip only | [`r8152_oot.ko`](experimental/5.4.268-294.24.papikonda.2-k24n) | TVs with Realtek's K24N chip (like the 2025 B5), webOS 25 firmware 33.31 | Realtek RTL8152, RTL8153 and RTL8156 |
 | `5.4.268-294.24.papikonda.2`, k25lp chip only | [`r8152_oot.ko`](experimental/5.4.268-294.24.papikonda.2-k25lp) | TVs with Realtek's K25Lp chip, webOS 25 firmware 33.31 | Realtek RTL8152, RTL8153 and RTL8156 |
 | `5.4.268-294.24.papikonda.2`, k8hp chip only | [`r8152_oot.ko`](experimental/5.4.268-294.24.papikonda.2-k8hp) | TVs with Realtek's K8Hp chip, webOS 25 firmware 33.31 | Realtek RTL8152, RTL8153 and RTL8156 |
@@ -72,9 +72,10 @@ These are built from LG's own kernel source with [LG-USB-2-ETH0's driver build](
 | `5.4.96-223.9.oeta.2`, k24 chip only | [`r8152_oot.ko`, `ax88179_178a.ko`](experimental/5.4.96-223.9.oeta.2-k24) | TVs with Realtek's K24 chip, firmware 03.10 and 03.11 (webOS 24) | Realtek RTL8152, RTL8153 and RTL8156; ASIX AX88179 and AX88178A |
 | `5.4.96-223.9.oeta.2`, k8lpn2 chip only | [`r8152_oot.ko`, `ax88179_178a.ko`](experimental/5.4.96-223.9.oeta.2-k8lpn2) | TVs with Realtek's K8LpN2 chip, firmware 03.10 and 03.11 (webOS 24) | Realtek RTL8152, RTL8153 and RTL8156; ASIX AX88179 and AX88178A |
 | `5.4.96-223.obr4tv.29`, k24 chip only | [`r8152_oot.ko`, `ax88179_178a.ko`](experimental/5.4.96-223.obr4tv.29-k24) | TVs with Realtek's K24 chip, firmware 23.20 (webOS 24) | Realtek RTL8152, RTL8153 and RTL8156; ASIX AX88179 and AX88178A |
-| `4.4.84-612.40.jimna.1`, K6Hp chip only | [`r8152.ko`, `ax88179_178a.ko`](experimental/4.4.84-612.40.jimna.1-k6hp) | 2020 TVs with the K6Hp chip (like the NANO87) on firmware 04.63 and 04.64 (webOS 5) | Realtek RTL8152, RTL8153; ASIX AX88179, AX88178A |
-| `4.4.84-612.21.6.jardine.2`, K6Hp chip only | [`r8152.ko`, `ax88179_178a.ko`](experimental/4.4.84-612.21.6.jardine.2-k6hp) | 2020 TVs with the K6Hp chip (like the NANO87) on firmware 03.21 (webOS 5) | Realtek RTL8152, RTL8153; ASIX AX88179, AX88178A |
-| `4.4.84-611.japoon.14`, K6Lp chip only | [`r8152.ko`, `ax88179_178a.ko`](experimental/4.4.84-611.japoon.14-k6lp) | LG's HU810P projector (Korea) on firmware 03.00 and 03.10 (webOS 5) | Realtek RTL8152, RTL8153; ASIX AX88179, AX88178A |
+| `4.4.84-612.40.jimna.1`, K6Hp chip only | [`r8152.ko`, `r8152_oot.ko`, `ax88179_178a.ko`](experimental/4.4.84-612.40.jimna.1-k6hp) | 2020 TVs with the K6Hp chip (like the NANO87) on firmware 04.63 and 04.64 (webOS 5) | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179, AX88178A |
+| `4.4.84-612.21.6.jardine.2`, K6Hp chip only | [`r8152.ko`, `r8152_oot.ko`, `ax88179_178a.ko`](experimental/4.4.84-612.21.6.jardine.2-k6hp) | 2020 TVs with the K6Hp chip (like the NANO87) on firmware 03.21 (webOS 5) | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179, AX88178A |
+| `4.4.84-611.japoon.14`, K6Lp chip only | [`r8152.ko`, `r8152_oot.ko`, `ax88179_178a.ko`](experimental/4.4.84-611.japoon.14-k6lp) | LG's HU810P projector (Korea) on firmware 03.00 and 03.10 (webOS 5) | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179, AX88178A |
+| `4.4.84-612.jcl4tv.40`, K6Lp chip only | [`r8152.ko`, `r8152_oot.ko`](experimental/4.4.84-612.jcl4tv.40-k6lp) | The 2020 UN7300 on webOS 5, the kernel OCT0PUSCRIME's ASIX driver is for | Realtek RTL8152, RTL8153, RTL8156 |
 
 `experimental/SHA256SUMS` lists their checksums.
 
