@@ -1,0 +1,47 @@
+
+String dump of section '.modinfo':
+  [     0]  version=v1.10.11
+  [    11]  license=GPL
+  [    1d]  description=Realtek RTL8152/RTL8153 Based USB Ethernet Adapters
+  [    5d]  author=Realtek linux nic maintainers <nic_swsd@realtek.com>
+  [    99]  srcversion=CC5237D6D39166F709A73F3
+  [    bc]  alias=usb:v2357p0601d*dc*dsc*dp*ic02isc06ip00in*
+  [    ed]  alias=usb:v2357p0601d*dc*dsc*dp*icFFisc*ip*in*
+  [   11c]  alias=usb:v0955p09FFd*dc*dsc*dp*ic02isc06ip00in*
+  [   14d]  alias=usb:v0955p09FFd*dc*dsc*dp*icFFisc*ip*in*
+  [   17c]  alias=usb:v13B1p0041d*dc*dsc*dp*ic02isc06ip00in*
+  [   1ad]  alias=usb:v13B1p0041d*dc*dsc*dp*icFFisc*ip*in*
+  [   1dc]  alias=usb:v17EFpA387d*dc*dsc*dp*ic02isc06ip00in*
+  [   20d]  alias=usb:v17EFpA387d*dc*dsc*dp*icFFisc*ip*in*
+  [   23c]  alias=usb:v17EFp721Ed*dc*dsc*dp*ic02isc06ip00in*
+  [   26d]  alias=usb:v17EFp721Ed*dc*dsc*dp*icFFisc*ip*in*
+  [   29c]  alias=usb:v17EFp7214d*dc*dsc*dp*ic02isc06ip00in*
+  [   2cd]  alias=usb:v17EFp7214d*dc*dsc*dp*icFFisc*ip*in*
+  [   2fc]  alias=usb:v17EFp720Cd*dc*dsc*dp*ic02isc06ip00in*
+  [   32d]  alias=usb:v17EFp720Cd*dc*dsc*dp*icFFisc*ip*in*
+  [   35c]  alias=usb:v17EFp7205d*dc*dsc*dp*ic02isc06ip00in*
+  [   38d]  alias=usb:v17EFp7205d*dc*dsc*dp*icFFisc*ip*in*
+  [   3bc]  alias=usb:v17EFp3069d*dc*dsc*dp*ic02isc06ip00in*
+  [   3ed]  alias=usb:v17EFp3069d*dc*dsc*dp*icFFisc*ip*in*
+  [   41c]  alias=usb:v17EFp3062d*dc*dsc*dp*ic02isc06ip00in*
+  [   44d]  alias=usb:v17EFp3062d*dc*dsc*dp*icFFisc*ip*in*
+  [   47c]  alias=usb:v17EFp304Fd*dc*dsc*dp*ic02isc06ip00in*
+  [   4ad]  alias=usb:v17EFp304Fd*dc*dsc*dp*icFFisc*ip*in*
+  [   4dc]  alias=usb:v04E8pA101d*dc*dsc*dp*ic02isc06ip00in*
+  [   50d]  alias=usb:v04E8pA101d*dc*dsc*dp*icFFisc*ip*in*
+  [   53c]  alias=usb:v045Ep0927d*dc*dsc*dp*ic02isc06ip00in*
+  [   56d]  alias=usb:v045Ep0927d*dc*dsc*dp*icFFisc*ip*in*
+  [   59c]  alias=usb:v045Ep07C6d*dc*dsc*dp*ic02isc06ip00in*
+  [   5cd]  alias=usb:v045Ep07C6d*dc*dsc*dp*icFFisc*ip*in*
+  [   5fc]  alias=usb:v045Ep07ABd*dc*dsc*dp*ic02isc06ip00in*
+  [   62d]  alias=usb:v045Ep07ABd*dc*dsc*dp*icFFisc*ip*in*
+  [   65c]  alias=usb:v0BDAp8153d*dc*dsc*dp*ic02isc06ip00in*
+  [   68d]  alias=usb:v0BDAp8153d*dc*dsc*dp*icFFisc*ip*in*
+  [   6bc]  alias=usb:v0BDAp8152d*dc*dsc*dp*ic02isc06ip00in*
+  [   6ed]  alias=usb:v0BDAp8152d*dc*dsc*dp*icFFisc*ip*in*
+  [   71c]  alias=usb:v0BDAp8050d*dc*dsc*dp*ic02isc06ip00in*
+  [   74d]  alias=usb:v0BDAp8050d*dc*dsc*dp*icFFisc*ip*in*
+  [   77c]  depends=
+  [   785]  name=r8152
+  [   790]  vermagic=5.4.96-955.20.namtok.1 SMP preempt mod_unload aarch64
+

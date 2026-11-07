@@ -1,0 +1,18 @@
+
+String dump of section '.modinfo':
+  [     0]  license=GPL
+  [     c]  description=Aquantia AQtion USB to 5/2.5GbE Controllers
+  [    44]  alias=usb:v1C04p0015d*dc*dsc*dp*ic02isc06ip00in*
+  [    75]  alias=usb:v1C04p0015d*dc*dsc*dp*icFFisc*ip*in*
+  [    a4]  alias=usb:v20F4pE05Ad*dc*dsc*dp*ic02isc06ip00in*
+  [    d5]  alias=usb:v20F4pE05Ad*dc*dsc*dp*icFFisc*ip*in*
+  [   104]  alias=usb:v0B95p2791d*dc*dsc*dp*ic02isc06ip00in*
+  [   135]  alias=usb:v0B95p2791d*dc*dsc*dp*icFFisc*ip*in*
+  [   164]  alias=usb:v0B95p2790d*dc*dsc*dp*ic02isc06ip00in*
+  [   195]  alias=usb:v0B95p2790d*dc*dsc*dp*icFFisc*ip*in*
+  [   1c4]  alias=usb:v2ECApC101d*dc*dsc*dp*ic02isc06ip00in*
+  [   1f5]  alias=usb:v2ECApC101d*dc*dsc*dp*icFFisc*ip*in*
+  [   224]  depends=
+  [   22d]  name=aqc111
+  [   239]  vermagic=5.4.268-966.8.4.okapi.pine.1 SMP preempt mod_unload aarch64
+

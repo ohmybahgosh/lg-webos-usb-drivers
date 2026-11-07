@@ -1,0 +1,16 @@
+
+String dump of section '.modinfo':
+  [     0]  license=GPL
+  [     c]  description=ASIX AX88179/178A based USB 3.0/2.0 Gigabit Ethernet Devices
+  [    55]  alias=usb:v050Dp0128d*dc*dsc*dp*ic*isc*ip*in*
+  [    83]  alias=usb:v17EFp304Bd*dc*dsc*dp*ic*isc*ip*in*
+  [    b1]  alias=usb:v04E8pA100d*dc*dsc*dp*ic*isc*ip*in*
+  [    df]  alias=usb:v0DF6p0072d*dc*dsc*dp*ic*isc*ip*in*
+  [   10d]  alias=usb:v2001p4A00d*dc*dsc*dp*ic*isc*ip*in*
+  [   13b]  alias=usb:v04B4p3610d*dc*dsc*dp*ic*isc*ip*in*
+  [   169]  alias=usb:v0B95p178Ad*dc*dsc*dp*ic*isc*ip*in*
+  [   197]  alias=usb:v0B95p1790d*dc*dsc*dp*ic*isc*ip*in*
+  [   1c5]  depends=
+  [   1ce]  name=ax88179_178a
+  [   1e0]  vermagic=5.4.268-966.15.ptl4tv.8 SMP preempt mod_unload aarch64
+

@@ -2,7 +2,7 @@
 
 **Not tested on a TV yet.**  `get-driver` doesn't offer them.  If your TV runs this kernel, please try one and report back: see [Testing one](https://github.com/ohmybahgosh/LG-USB-2-ETH0/blob/main/docs/driver-build.md#testing-one).
 
-LG's LM21A-family chips have no USB network drivers at all, not even `usbnet`.  Realtek's driver doesn't need `usbnet`, so these two work on their own.  Drivers that do need it (ASIX, `cdc_ncm`, `cdc_ether`) aren't here yet.
+LG's LM21A-family chips have no USB network drivers at all, not even `usbnet`.  Realtek's driver doesn't need `usbnet`, so `r8152_oot` and `r8152` work on their own.  Drivers that do need it (ASIX AX88179, Davicom, Aquantia) come with this kernel's own `usbnet.ko`, which LG-USB-2-ETH0 loads first.  The older ASIX `asix` driver and `lan78xx` also need the kernel's PHY library, which it leaves out too, so they aren't here.
 
 - **Built by:** [OhMyBahGosh](https://github.com/ohmybahgosh), with [LG-USB-2-ETH0's scripts/driver-build/build.sh](https://github.com/ohmybahgosh/LG-USB-2-ETH0/tree/main/scripts/driver-build)
 - **TVs:** 2022 LG LCD TVs with the LM21AN chip (UQ70 to UQ90 series, like the 75UQ9000PUD and 70UQ8000AUB), on firmware 04.60 (webOS 22).  Only that chip runs this kernel name.
@@ -23,5 +23,33 @@ LG's LM21A-family chips have no USB network drivers at all, not even `usbnet`.  
 - **Adapters:** Realtek RTL8152 and RTL8153 (gigabit), not RTL8156
 - **SHA-256:** `ace00688f2b7d63545921a64e48c7d123581d1b06ed98f636a054b7ad2652615`
 - **Checks:** `vermagic=5.4.96-934.mlt4tv.17 SMP preempt mod_unload aarch64`, the kernel has MODVERSIONS and module signing off, and all 108 symbols it imports are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
+
+## usbnet.ko
+
+- **Driver:** the kernel's own `usbnet` (drivers/net/usb/usbnet.c), the core the drivers below are built on.  This kernel leaves it out, so LG-USB-2-ETH0 loads this one first, checked against its pinned SHA-256, before any of them
+- **Adapters:** none by itself
+- **SHA-256:** `14690e0215980eab06b741047376f66a28049647527dd9a9778cd5ed28e824d9`
+- **Checks:** `vermagic=5.4.96-934.mlt4tv.17 SMP preempt mod_unload aarch64`, and all 103 symbols it imports are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
+
+## ax88179_178a.ko
+
+- **Driver:** the kernel's own `ax88179_178a`, built on the `usbnet` above
+- **Adapters:** ASIX AX88179 and AX88178A
+- **SHA-256:** `582a967496f9afb96ce068078fc0938719588d43f60b7286b117f81c02d7dcfc`
+- **Checks:** `vermagic=5.4.96-934.mlt4tv.17 SMP preempt mod_unload aarch64`, and of the 46 symbols it imports, 21 come from the `usbnet.ko` above and the rest are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
+
+## dm9601.ko
+
+- **Driver:** the kernel's own `dm9601`, built on the `usbnet` above
+- **Adapters:** Davicom DM9601 and the 100 Mbit adapters built on it
+- **SHA-256:** `7cd82d8988ab1ce916ec349628cfa124286d61debef5a26f21db97e9403aa7ea`
+- **Checks:** `vermagic=5.4.96-934.mlt4tv.17 SMP preempt mod_unload aarch64`, and of the 42 symbols it imports, 21 come from the `usbnet.ko` above and the rest are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
+
+## aqc111.ko
+
+- **Driver:** the kernel's own `aqc111`, built on the `usbnet` above
+- **Adapters:** Aquantia AQC111U and AQC112 (5G and 2.5G), and the ASIX, TRENDnet and QNAP adapters built on them
+- **SHA-256:** `90451b94ed5f520005959edcb85fae2eadd3521b7fc197c375029df179056ba2`
+- **Checks:** `vermagic=5.4.96-934.mlt4tv.17 SMP preempt mod_unload aarch64`, and of the 48 symbols it imports, 18 come from the `usbnet.ko` above and the rest are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
 
 `build-*` files are from the build: each module's info, the symbols it imports, and how the build config differs from the TV's.

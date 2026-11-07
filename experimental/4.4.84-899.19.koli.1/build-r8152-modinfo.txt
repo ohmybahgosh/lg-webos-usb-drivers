@@ -1,0 +1,38 @@
+
+String dump of section '.modinfo':
+  [     0]  license=GPL
+  [     c]  description=Realtek RTL8152/RTL8153 Based USB Ethernet Adapters
+  [    4c]  author=Realtek linux nic maintainers <nic_swsd@realtek.com>
+  [    88]  alias=usb:v2357p0601d*dc*dsc*dp*ic02isc06ip00in*
+  [    b9]  alias=usb:v2357p0601d*dc*dsc*dp*icFFisc*ip*in*
+  [    e8]  alias=usb:v0955p09FFd*dc*dsc*dp*ic02isc06ip00in*
+  [   119]  alias=usb:v0955p09FFd*dc*dsc*dp*icFFisc*ip*in*
+  [   148]  alias=usb:v13B1p0041d*dc*dsc*dp*ic02isc06ip00in*
+  [   179]  alias=usb:v13B1p0041d*dc*dsc*dp*icFFisc*ip*in*
+  [   1a8]  alias=usb:v17EFp7214d*dc*dsc*dp*ic02isc06ip00in*
+  [   1d9]  alias=usb:v17EFp7214d*dc*dsc*dp*icFFisc*ip*in*
+  [   208]  alias=usb:v17EFp720Cd*dc*dsc*dp*ic02isc06ip00in*
+  [   239]  alias=usb:v17EFp720Cd*dc*dsc*dp*icFFisc*ip*in*
+  [   268]  alias=usb:v17EFp7205d*dc*dsc*dp*ic02isc06ip00in*
+  [   299]  alias=usb:v17EFp7205d*dc*dsc*dp*icFFisc*ip*in*
+  [   2c8]  alias=usb:v17EFp3069d*dc*dsc*dp*ic02isc06ip00in*
+  [   2f9]  alias=usb:v17EFp3069d*dc*dsc*dp*icFFisc*ip*in*
+  [   328]  alias=usb:v17EFp3062d*dc*dsc*dp*ic02isc06ip00in*
+  [   359]  alias=usb:v17EFp3062d*dc*dsc*dp*icFFisc*ip*in*
+  [   388]  alias=usb:v17EFp304Fd*dc*dsc*dp*ic02isc06ip00in*
+  [   3b9]  alias=usb:v17EFp304Fd*dc*dsc*dp*icFFisc*ip*in*
+  [   3e8]  alias=usb:v04E8pA101d*dc*dsc*dp*ic02isc06ip00in*
+  [   419]  alias=usb:v04E8pA101d*dc*dsc*dp*icFFisc*ip*in*
+  [   448]  alias=usb:v045Ep07C6d*dc*dsc*dp*ic02isc06ip00in*
+  [   479]  alias=usb:v045Ep07C6d*dc*dsc*dp*icFFisc*ip*in*
+  [   4a8]  alias=usb:v045Ep07ABd*dc*dsc*dp*ic02isc06ip00in*
+  [   4d9]  alias=usb:v045Ep07ABd*dc*dsc*dp*icFFisc*ip*in*
+  [   508]  alias=usb:v0BDAp8153d*dc*dsc*dp*ic02isc06ip00in*
+  [   539]  alias=usb:v0BDAp8153d*dc*dsc*dp*icFFisc*ip*in*
+  [   568]  alias=usb:v0BDAp8152d*dc*dsc*dp*ic02isc06ip00in*
+  [   599]  alias=usb:v0BDAp8152d*dc*dsc*dp*icFFisc*ip*in*
+  [   5c8]  alias=usb:v0BDAp8050d*dc*dsc*dp*ic02isc06ip00in*
+  [   5f9]  alias=usb:v0BDAp8050d*dc*dsc*dp*icFFisc*ip*in*
+  [   628]  depends=
+  [   631]  vermagic=4.4.84-899.19.koli.1 SMP preempt mod_unload ARMv7 
+
