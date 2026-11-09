@@ -97,6 +97,7 @@ These are built from LG's own kernel source with [LG-USB-2-ETH0's driver build](
 | `4.4.84-612.jcl4tv.40`, K6Lp chip only | [`r8152.ko`, `r8152_oot.ko`, `dm9601.ko`, `lan78xx.ko`](experimental/4.4.84-612.jcl4tv.40-k6lp) | The 2020 UN7300 on webOS 5, the kernel OCT0PUSCRIME's ASIX driver is for | Realtek RTL8152, RTL8153, RTL8156; Davicom DM9601; Microchip LAN7800 and LAN7850 |
 | `4.4.3-208.drd4tv.3` | [`r8152.ko`, `r8152_oot.ko`, `ax88179_178a.ko`, `dm9601.ko`, `lan78xx.ko`](experimental/4.4.3-208.drd4tv.3) | 2017 UJ63, UJ67 and UJ70 4K LCDs with the K3LP chip on firmware 06.10.70 and 06.10.75 (webOS 3.5) | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179, AX88178A; Davicom DM9601; Microchip LAN7800 and LAN7850 |
 | `4.4.3-78.drd4tv.2` | [`r8152.ko`, `r8152_oot.ko`, `ax88179_178a.ko`, `dm9601.ko`, with `usbnet.ko`](experimental/4.4.3-78.drd4tv.2) | 2017 LJ HD and Full HD LCDs with the M2R chip on firmware 05.80.35 to 06.10.60 (webOS 3.5) | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179, AX88178A; Davicom DM9601 |
+| `4.4.3-119.drd4tv.6`, M16P chip only | [`r8152_oot.ko`, `ax88179_178a.ko`, `dm9601.ko`, `lan78xx.ko`, with `usbnet.ko`](experimental/4.4.3-119.drd4tv.6-m16p) | 2017 OLEDs like the C7, and UJ7 4K LCDs, with the M16P chip on firmware 06.10.65 (webOS 3.5) | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179, AX88178A; Davicom DM9601; Microchip LAN7800 and LAN7850 |
 
 `experimental/SHA256SUMS` lists their checksums.
 
