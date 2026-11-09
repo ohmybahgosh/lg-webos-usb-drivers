@@ -13,34 +13,34 @@
 - **Driver:** Realtek's r8152 v2.22.1 as DonZoomik patched it, renamed `r8152_oot`, with [`r8152-4.4.patch`](../source/r8152-4.4.patch) for kernel 4.4.  The same source as the other 4.4 builds.  The kernel's own `r8152` is built in but too old for the RTL8153B (it logs `Unknown version 0x6010`) and the RTL8156
 - **Adapters:** Realtek RTL8152, RTL8153 (including the RTL8153B) and RTL8156 (2.5 gigabit)
 - **SHA-256:** `af80711e8fea081b836281223660b721dd26ba995f5f5e312e133885f7ad2c84`
-- **Checks:** `vermagic=4.4.3-119.drd4tv.6 SMP preempt mod_unload ARMv7 p2v8`, and all 132 symbols it imports are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
+- **Checks:** `vermagic=4.4.3-119.drd4tv.6 SMP preempt mod_unload ARMv7 p2v8`, and all 132 symbols it imports are exported by the TV's kernel.  Struct offsets: checked against the TV's own kernel image with `abi-check.py` (the size of `struct net_device` and the offsets in 17 network and USB core functions match).  It hasn't run on a TV yet, so it still needs a tester.
 
 ## usbnet.ko
 
 - **Driver:** `drivers/net/usb/usbnet.c` from the same LG kernel source, built as a module: the core the ASIX, Davicom and Microchip drivers need, which this kernel leaves out.  The script loads it first
 - **Adapters:** none on its own
 - **SHA-256:** `83a046f10e739ebde0782973afd24146ba3b5d1052af9c5040bf481446db2d0c`
-- **Checks:** `vermagic=4.4.3-119.drd4tv.6 SMP preempt mod_unload ARMv7 p2v8`, and all 99 symbols it imports are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
+- **Checks:** `vermagic=4.4.3-119.drd4tv.6 SMP preempt mod_unload ARMv7 p2v8`, and all 99 symbols it imports are exported by the TV's kernel.  Struct offsets: checked against the TV's own kernel image with `abi-check.py` (the size of `struct net_device` and the offsets in 17 network and USB core functions match).  It hasn't run on a TV yet, so it still needs a tester.
 
 ## ax88179_178a.ko
 
 - **Driver:** `drivers/net/usb/ax88179_178a.c` from the same LG kernel source, built as a module, since this kernel leaves it out
 - **Adapters:** ASIX AX88179 and AX88178A (gigabit)
 - **SHA-256:** `b37a3e20b9da3a4d072a377f167c6e99273be42da9326eb509ef6ae3c7ace24a`
-- **Checks:** `vermagic=4.4.3-119.drd4tv.6 SMP preempt mod_unload ARMv7 p2v8`, and all 48 symbols it imports are exported by the TV's kernel (with `usbnet.ko` above loaded).  USB struct offsets: not checked, so it needs a tester.
+- **Checks:** `vermagic=4.4.3-119.drd4tv.6 SMP preempt mod_unload ARMv7 p2v8`, and all 48 symbols it imports are exported by the TV's kernel (with `usbnet.ko` above loaded).  Struct offsets: checked against the TV's own kernel image with `abi-check.py` (the size of `struct net_device` and the offsets in 17 network and USB core functions match).  It hasn't run on a TV yet, so it still needs a tester.
 
 ## dm9601.ko
 
 - **Driver:** `drivers/net/usb/dm9601.c` from the same LG kernel source, built as a module, since this kernel leaves it out
 - **Adapters:** Davicom DM9601 and the 100 Mbit adapters built on it
 - **SHA-256:** `a4cac01d3f78868eb2679bdd59b9e872501a335c2b1e26f974f267a33d321e59`
-- **Checks:** `vermagic=4.4.3-119.drd4tv.6 SMP preempt mod_unload ARMv7 p2v8`, and all 45 symbols it imports are exported by the TV's kernel (with `usbnet.ko` above loaded).  USB struct offsets: not checked, so it needs a tester.
+- **Checks:** `vermagic=4.4.3-119.drd4tv.6 SMP preempt mod_unload ARMv7 p2v8`, and all 45 symbols it imports are exported by the TV's kernel (with `usbnet.ko` above loaded).  Struct offsets: checked against the TV's own kernel image with `abi-check.py` (the size of `struct net_device` and the offsets in 17 network and USB core functions match).  It hasn't run on a TV yet, so it still needs a tester.
 
 ## lan78xx.ko
 
 - **Driver:** `drivers/net/usb/lan78xx.c` from the same LG kernel source, built as a module, since this kernel leaves it out
 - **Adapters:** Microchip LAN7800 and LAN7850
 - **SHA-256:** `999f9df3e4246860df241612be4142ae98ff46766784934585f1aa71e31ae86b`
-- **Checks:** `vermagic=4.4.3-119.drd4tv.6 SMP preempt mod_unload ARMv7 p2v8`, and all 118 symbols it imports are exported by the TV's kernel (with `usbnet.ko` above loaded).  USB struct offsets: not checked, so it needs a tester.
+- **Checks:** `vermagic=4.4.3-119.drd4tv.6 SMP preempt mod_unload ARMv7 p2v8`, and all 118 symbols it imports are exported by the TV's kernel (with `usbnet.ko` above loaded).  Struct offsets: checked against the TV's own kernel image with `abi-check.py` (the size of `struct net_device` and the offsets in 17 network and USB core functions match).  It hasn't run on a TV yet, so it still needs a tester.
 
 `build-*` files are from the build: each module's info, the symbols it imports, and how the build config differs from the TV's.
