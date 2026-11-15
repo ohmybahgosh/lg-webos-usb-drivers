@@ -11,6 +11,30 @@ Everything in `drivers/` is copied byte for byte from its author's repository at
 | `5.4.268-329.ptl4tv.5` | [`r8152_oot.ko`](drivers/5.4.268-329.ptl4tv.5) | 2022 C2, 2024 C4 (webOS 25) | Realtek RTL8152, RTL8153, RTL8156 | [DonZoomik](https://github.com/DonZoomik/webos-r8152) |
 | `5.4.268-294.17.paparoa.pine.2` | [`r8152.ko`](drivers/5.4.268-294.17.paparoa.pine.2) | 2024 QNED and OLED, K25lp / Paparoa (webOS 25) | Realtek RTL8152, RTL8153 | [mbenitez343](https://github.com/mbenitez343/lg-webos-2024-ethernet-fix) |
 | `4.4.84-612.jcl4tv.40` | [`ax88179_178a.ko`](drivers/4.4.84-612.jcl4tv.40) | 2020 UN7300 (webOS 5) | ASIX AX88179, AX88178A | [OCT0PUSCRIME](https://github.com/OCT0PUSCRIME/lg-webos-ax88179-driver) |
+| `5.4.268-294.24.papikonda.2` | [`ax88179_178a.ko`](drivers/5.4.268-294.24.papikonda.2) | 2025 B5 (webOS 25) | ASIX AX88179, AX88178A | [dd3git](https://github.com/dd3git/lg-webos-ax88179-driver) |
+| `4.4.84`, K5Lp chip | [`r8152.ko`, `ax88179_178a.ko`](drivers/k5lp-4.4.84) | TVs with the Realtek K5Lp chip | Realtek RTL8152, RTL8153; ASIX AX88179, AX88178A | [throwaway96](https://github.com/throwaway96/webos-kernel-drivers) |
+
+`SHA256SUMS` lists every module's checksum.
+
+## Built here and reported working
+
+These come from LG's own kernel source like the ones waiting for testers below, and have since worked on a real TV.  `get-driver` offers them the same way as the ones above.  Other modules in the same folders are still waiting for testers.
+
+| Kernel (`uname -r`) | Module | Tested on | Report |
+|---|---|---|---|
+| `5.4.268-320` | [`r8152_oot.ko`](experimental/5.4.268-320) | 2024 G4 (webOS 24), RTL8153 | [#8](https://github.com/ohmybahgosh/LG-USB-2-ETH0/issues/8) |
+| `4.4.84-612.jcl4tv.40`, K6Lp chip only | [`r8152.ko`](experimental/4.4.84-612.jcl4tv.40-k6lp) | 2020 UN7300 (webOS 5), Cable Matters RTL8153 | [#6](https://github.com/ohmybahgosh/LG-USB-2-ETH0/issues/6) |
+| `5.4.96-115.22.meru.2`, K8Lp chip only | [`r8152_oot.ko`](experimental/5.4.96-115.22.meru.2-k8lp) | 2022 UQ76 (webOS 22), TP-Link UE300, 283 Mbit/s down, 311 up | [#27](https://github.com/ohmybahgosh/LG-USB-2-ETH0/issues/27) |
+| `4.4.84-150.glacier.2` | [`ax88179_178a.ko`, with `usbnet.ko`](experimental/4.4.84-150.glacier.2) | 2018 B8 (webOS 4.0), AX88179A | [#20](https://github.com/ohmybahgosh/LG-USB-2-ETH0/issues/20), [#21](https://github.com/ohmybahgosh/LG-USB-2-ETH0/issues/21) |
+| `4.4.3-119.drd4tv.6`, M16P chip only | [`r8152_oot.ko`](experimental/4.4.3-119.drd4tv.6-m16p) | 2017 C7 (webOS 3.5), RTL8153, 500 Mbit/s | [#17](https://github.com/ohmybahgosh/LG-USB-2-ETH0/issues/17) |
+| `4.4.3-119.drd4tv.6`, M16P chip only | [`ax88179_178a.ko`, with `usbnet.ko`](experimental/4.4.3-119.drd4tv.6-m16p) | 2017 C7 (webOS 3.5), UGREEN AX88179B | [#16](https://github.com/ohmybahgosh/LG-USB-2-ETH0/issues/16), [#18](https://github.com/ohmybahgosh/LG-USB-2-ETH0/issues/18) |
+
+## Experimental: waiting for testers
+
+These are built from LG's own kernel source with [LG-USB-2-ETH0's driver build](https://github.com/ohmybahgosh/LG-USB-2-ETH0/blob/main/docs/driver-build.md), the way DonZoomik built his.  (The `5.4.268-223` ones come from the nearest 5.4.268 source, since LG hasn't published that kernel's: each folder's SOURCE.md says.)  Besides Realtek and ASIX drivers, most folders now also have `aqc111`, `dm9601` and `lan78xx`, built from the same source: none of LG's kernels include those, so adapters with Aquantia, Davicom or Microchip LAN78xx chips get no driver on any LG TV without them.  Each one passed the build's checks (exact `vermagic`, every imported symbol exported by the TV's kernel), but **none has run on a TV yet**, so `get-driver` doesn't offer them.  If your TV runs one of these kernels, please [try it](https://github.com/ohmybahgosh/LG-USB-2-ETH0/blob/main/docs/driver-build.md#testing-one) and report back.
+
+| Kernel (`uname -r`) | Module | TVs | Adapters |
+|---|---|---|---|
 | `4.4.84-p.649.grampians.k5lp.1`, K5LP chip only | [`r8152.ko`, `r8152_oot.ko`, `ax88179_178a.ko`, `dm9601.ko`, `lan78xx.ko`](experimental/4.4.84-p.649.grampians.k5lp.1-k5lp) | 2019 UM7000 to UM7800 LCDs with the K5LP chip on firmware 05.40.80 and 05.40.97 (webOS 4.5) | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179, AX88178A; Davicom DM9601; Microchip LAN7800 and LAN7850 |
 | `4.4.84-417.gld4tv.7`, K5LP chip only | [`r8152.ko`, `r8152_oot.ko`, `ax88179_178a.ko`, `dm9601.ko`, `lan78xx.ko`](experimental/4.4.84-417.gld4tv.7-k5lp) | 2019 UM7000 to UM7800 LCDs with the K5LP chip on firmware 05.00.02 to 05.00.15 (webOS 4.5) | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179, AX88178A; Davicom DM9601; Microchip LAN7800 and LAN7850 |
 | `4.4.84-433`, M3R chip only | [`r8152.ko`, `r8152_oot.ko`, `ax88179_178a.ko`, `dm9601.ko`, with `usbnet.ko`](experimental/4.4.84-433-m3r) | 2019 LM63 and other small HD LCDs with the M3R chip on firmware 05.40.85 and 05.40.97 (webOS 4.5) | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179, AX88178A; Davicom DM9601 |
@@ -21,17 +45,6 @@ Everything in `drivers/` is copied byte for byte from its author's repository at
 | `4.4.84-723.kcl4tv.20`, K7LP chip only | [`r8152.ko`, `r8152_oot.ko`, `ax88179_178a.ko`, `dm9601.ko`, `lan78xx.ko`](experimental/4.4.84-723.kcl4tv.20-k7lp) | 2021 LCD TVs with the K7LP chip (UP and NANO models) on firmware 03.53.46 (webOS 6) | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179, AX88178A; Davicom DM9601; Microchip LAN7800 and LAN7850 |
 | `4.4.84-229.kcl4tv.6`, E60N chip only | [`r8152.ko`, `r8152_oot.ko`, `ax88179_178a.ko`, `dm9601.ko`, `lan78xx.ko`](experimental/4.4.84-229.kcl4tv.6-e60n) | 2021 NANO96 to NANO99 and QNED90 to QNED99 LCDs with the E60N chip on firmware 03.53.31 and 03.53.45 (webOS 6) | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179, AX88178A; Davicom DM9601; Microchip LAN7800 and LAN7850 |
 | `4.4.84-219.jcl4tvmr.6`, O208K chip only | [`r8152.ko`, `r8152_oot.ko`, `ax88179_178a.ko`, `dm9601.ko`, `lan78xx.ko`](experimental/4.4.84-219.jcl4tvmr.6-o208k) | 2020 8K LCDs and the ZX OLED with the O208K chip (NANO97, NANO99) on firmware 04.63.20 to 04.64.00 (webOS 5) | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179, AX88178A; Davicom DM9601; Microchip LAN7800 and LAN7850 |
-| `5.4.268-294.24.papikonda.2` | [`ax88179_178a.ko`](drivers/5.4.268-294.24.papikonda.2) | 2025 B5 (webOS 25) | ASIX AX88179, AX88178A | [dd3git](https://github.com/dd3git/lg-webos-ax88179-driver) |
-| `4.4.84`, K5Lp chip | [`r8152.ko`, `ax88179_178a.ko`](drivers/k5lp-4.4.84) | TVs with the Realtek K5Lp chip | Realtek RTL8152, RTL8153; ASIX AX88179, AX88178A | [throwaway96](https://github.com/throwaway96/webos-kernel-drivers) |
-
-`SHA256SUMS` lists every module's checksum.
-
-## Experimental: waiting for testers
-
-These are built from LG's own kernel source with [LG-USB-2-ETH0's driver build](https://github.com/ohmybahgosh/LG-USB-2-ETH0/blob/main/docs/driver-build.md), the way DonZoomik built his.  (The `5.4.268-223` ones come from the nearest 5.4.268 source, since LG hasn't published that kernel's: each folder's SOURCE.md says.)  Besides Realtek and ASIX drivers, most folders now also have `aqc111`, `dm9601` and `lan78xx`, built from the same source: none of LG's kernels include those, so adapters with Aquantia, Davicom or Microchip LAN78xx chips get no driver on any LG TV without them.  Each one passed the build's checks (exact `vermagic`, every imported symbol exported by the TV's kernel), but **none has run on a TV yet**, so `get-driver` doesn't offer them.  If your TV runs one of these kernels, please [try it](https://github.com/ohmybahgosh/LG-USB-2-ETH0/blob/main/docs/driver-build.md#testing-one) and report back.
-
-| Kernel (`uname -r`) | Module | TVs | Adapters |
-|---|---|---|---|
 | `5.4.96-934.mlt4tv.17` | [`r8152_oot.ko`, `r8152.ko`, `ax88179_178a.ko`, `dm9601.ko`, `aqc111.ko`, with `usbnet.ko`](experimental/5.4.96-934.mlt4tv.17) | 2022 LCDs with the LM21AN chip (UQ70 to UQ90), firmware 04.60 (webOS 22).  Their kernel has no USB network drivers at all | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179; Davicom DM9601; Aquantia AQC111U and AQC112 |
 | `5.4.96-934.16.1.mirima.1` | [`r8152_oot.ko`, `r8152.ko`, `ax88179_178a.ko`, `dm9601.ko`, `aqc111.ko`, with `usbnet.ko`](experimental/5.4.96-934.16.1.mirima.1) | 2022 LCDs with the LM21AN chip, firmware 04.54 (webOS 22) | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179; Davicom DM9601; Aquantia AQC111U and AQC112 |
 | `5.4.96-955.20.namtok.1` | [`r8152_oot.ko`, `r8152.ko`, `ax88179_178a.ko`, `dm9601.ko`, `aqc111.ko`, with `usbnet.ko`](experimental/5.4.96-955.20.namtok.1) | 2023 LCDs with the LM21ANN chip (UR73 to UR81), firmware 13.40 (webOS 23).  Their kernel has no USB network drivers at all | Realtek RTL8152, RTL8153, RTL8156; ASIX AX88179; Davicom DM9601; Aquantia AQC111U and AQC112 |
