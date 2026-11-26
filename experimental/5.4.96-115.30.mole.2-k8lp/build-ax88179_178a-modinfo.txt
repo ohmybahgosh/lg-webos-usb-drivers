@@ -2,7 +2,7 @@
 String dump of section '.modinfo':
   [     0]  license=GPL
   [     c]  description=ASIX AX88179/178A based USB 3.0/2.0 Gigabit Ethernet Devices
-  [    55]  srcversion=E45F2A44FA246AD40F2A09D
+  [    55]  srcversion=2556CDB76FECB074AFED5DD
   [    78]  alias=usb:v050Dp0128d*dc*dsc*dp*ic*isc*ip*in*
   [    a6]  alias=usb:v17EFp304Bd*dc*dsc*dp*ic*isc*ip*in*
   [    d4]  alias=usb:v04E8pA100d*dc*dsc*dp*ic*isc*ip*in*

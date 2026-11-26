@@ -31,9 +31,9 @@
 
 ## ax88179_178a.ko
 
-- **Driver:** `drivers/net/usb/ax88179_178a.c` from the same LG kernel source, built as a module, since this kernel leaves it out
+- **Driver:** `drivers/net/usb/ax88179_178a.c` from the same LG kernel source, built as a module, since this kernel leaves it out, with Linux's 2022 RX fix ([`ax88179-rx-fixup.c`](../source/ax88179-rx-fixup.c)), so it doesn't count RX errors and drops that aren't real
 - **Adapters:** ASIX AX88179 and AX88178A (gigabit)
-- **SHA-256:** `175a793f24832a7148199327af7cb1f1e3f26c5c67d2ded4ecc568fede584d0f`
+- **SHA-256:** `8e132e4cc9c6d2532a2f67ba38f2d7f844100111617cd31090dad6bbccaf2960`
 - **Checks:** `vermagic=4.4.84-433 SMP preempt mod_unload ARMv7`, and all 48 symbols it imports are exported by the TV's kernel (with `usbnet.ko` above loaded).  USB struct offsets: not checked, so it needs a tester.
 
 ## dm9601.ko
