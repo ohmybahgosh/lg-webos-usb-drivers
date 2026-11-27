@@ -18,9 +18,9 @@
 
 ## ax88179_178a.ko
 
-- **Driver:** the kernel's own `ax88179_178a` driver (drivers/net/usb/ax88179_178a.c), which LG leaves out of this kernel
+- **Driver:** the kernel's own `ax88179_178a` driver (drivers/net/usb/ax88179_178a.c), which LG leaves out of this kernel, and smaller receive transfers on USB 2.0 ([`ax88179-usb2.py`](../source/ax88179-usb2.py)), for faster downloads on a TV's USB 2.0 port
 - **Adapters:** ASIX AX88179 and AX88178A
-- **SHA-256:** `056959c684d80e008056f46fe4403271fa414815f16438785ecdd2c67c4ae431`
+- **SHA-256:** `76a4bc015a3aa252ef4efc510459d3f73c4cd59acc947a42f55e1d0e4e93f8e1`
 - **Checks:** `vermagic=5.4.268-294.17.paparoa.pine.2 SMP preempt mod_unload aarch64`, the kernel has MODVERSIONS and module signing off, and all 47 symbols it imports are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
 
 ## aqc111.ko

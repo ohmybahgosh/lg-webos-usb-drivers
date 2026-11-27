@@ -25,9 +25,9 @@
 
 ## ax88179_178a.ko
 
-- **Driver:** the kernel's own `ax88179_178a` driver (drivers/net/usb/ax88179_178a.c), which LG leaves out of these kernels, with Linux's 2022 RX fix ([`ax88179-rx-fixup.c`](../source/ax88179-rx-fixup.c)), so it doesn't count RX errors and drops that aren't real
+- **Driver:** the kernel's own `ax88179_178a` driver (drivers/net/usb/ax88179_178a.c), which LG leaves out of these kernels, with Linux's 2022 RX fix ([`ax88179-rx-fixup.c`](../source/ax88179-rx-fixup.c)), so it doesn't count RX errors and drops that aren't real, and smaller receive transfers on USB 2.0 ([`ax88179-usb2.py`](../source/ax88179-usb2.py)), for faster downloads on a TV's USB 2.0 port
 - **Adapters:** ASIX AX88179 and AX88178A
-- **SHA-256:** `05f1f7de7192fe3324af9bc9261ae653d96b5a6ca2f3abf4295385be107b022c`
+- **SHA-256:** `9958af77d87cf20226faaaea62a978c5166cdd8ed49348d09746bee3ab4a9ad3`
 - **Checks:** `vermagic=4.4.84-612.40.jimna.1 SMP preempt mod_unload ARMv7`, the same flags as LG's own modules for this kernel.  The kernel has MODVERSIONS and module signing off, and all 48 symbols it imports are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
 
 ## dm9601.ko

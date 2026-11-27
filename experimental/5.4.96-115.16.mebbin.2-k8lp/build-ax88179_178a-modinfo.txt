@@ -2,16 +2,20 @@
 String dump of section '.modinfo':
   [     0]  license=GPL
   [     c]  description=ASIX AX88179/178A based USB 3.0/2.0 Gigabit Ethernet Devices
-  [    55]  srcversion=2556CDB76FECB074AFED5DD
-  [    78]  alias=usb:v050Dp0128d*dc*dsc*dp*ic*isc*ip*in*
-  [    a6]  alias=usb:v17EFp304Bd*dc*dsc*dp*ic*isc*ip*in*
-  [    d4]  alias=usb:v04E8pA100d*dc*dsc*dp*ic*isc*ip*in*
-  [   102]  alias=usb:v0DF6p0072d*dc*dsc*dp*ic*isc*ip*in*
-  [   130]  alias=usb:v2001p4A00d*dc*dsc*dp*ic*isc*ip*in*
-  [   15e]  alias=usb:v04B4p3610d*dc*dsc*dp*ic*isc*ip*in*
-  [   18c]  alias=usb:v0B95p178Ad*dc*dsc*dp*ic*isc*ip*in*
-  [   1ba]  alias=usb:v0B95p1790d*dc*dsc*dp*ic*isc*ip*in*
-  [   1e8]  depends=
-  [   1f1]  name=ax88179_178a
-  [   203]  vermagic=5.4.96-115.16.mebbin.2 SMP preempt mod_unload aarch64
+  [    55]  parm=hs_timer:USB 2.0 bulk-in aggregation timer (-1: stock)
+  [    91]  parmtype=hs_timer:int
+  [    a7]  parm=hs_size:USB 2.0 bulk-in size at gigabit, transfers are (hs_size + 2) KB (-1: stock 22)
+  [   103]  parmtype=hs_size:int
+  [   118]  srcversion=40ED8D1E11D78E2A581E3C2
+  [   13b]  alias=usb:v050Dp0128d*dc*dsc*dp*ic*isc*ip*in*
+  [   169]  alias=usb:v17EFp304Bd*dc*dsc*dp*ic*isc*ip*in*
+  [   197]  alias=usb:v04E8pA100d*dc*dsc*dp*ic*isc*ip*in*
+  [   1c5]  alias=usb:v0DF6p0072d*dc*dsc*dp*ic*isc*ip*in*
+  [   1f3]  alias=usb:v2001p4A00d*dc*dsc*dp*ic*isc*ip*in*
+  [   221]  alias=usb:v04B4p3610d*dc*dsc*dp*ic*isc*ip*in*
+  [   24f]  alias=usb:v0B95p178Ad*dc*dsc*dp*ic*isc*ip*in*
+  [   27d]  alias=usb:v0B95p1790d*dc*dsc*dp*ic*isc*ip*in*
+  [   2ab]  depends=
+  [   2b4]  name=ax88179_178a
+  [   2c6]  vermagic=5.4.96-115.16.mebbin.2 SMP preempt mod_unload aarch64
 

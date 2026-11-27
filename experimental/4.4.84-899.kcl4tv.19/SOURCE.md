@@ -33,9 +33,9 @@ LG's LM21A-family chips have no USB network drivers at all, not even `usbnet`.  
 
 ## ax88179_178a.ko
 
-- **Driver:** the kernel's own `ax88179_178a`, built on the `usbnet` above, with Linux's 2022 RX fix ([`ax88179-rx-fixup.c`](../source/ax88179-rx-fixup.c)), so it doesn't count RX errors and drops that aren't real
+- **Driver:** the kernel's own `ax88179_178a`, built on the `usbnet` above, with Linux's 2022 RX fix ([`ax88179-rx-fixup.c`](../source/ax88179-rx-fixup.c)), so it doesn't count RX errors and drops that aren't real, and smaller receive transfers on USB 2.0 ([`ax88179-usb2.py`](../source/ax88179-usb2.py)), for faster downloads on a TV's USB 2.0 port
 - **Adapters:** ASIX AX88179 and AX88178A
-- **SHA-256:** `eaa6f491563960ef2edd60a2629809098c041e0df432b4238b1a113eb7c5e1f6`
+- **SHA-256:** `b619cf5376b790df0820783f9e0bc1220bb12ce6f781dbb08ff1a70069167c0e`
 - **Checks:** `vermagic=4.4.84-899.kcl4tv.19 SMP preempt mod_unload ARMv7`, the kernel has MODVERSIONS and module signing off, and of the 47 symbols it imports, 20 come from the `usbnet.ko` above and the rest are exported by the TV's kernel.  USB struct offsets: not checked, so it needs a tester.
 
 ## dm9601.ko
